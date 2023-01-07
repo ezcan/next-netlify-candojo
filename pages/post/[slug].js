@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 
 export async function getStaticPaths() {
-    const files = fs.readdirSync('posts');
+    const files = fs.readdirSync('candojo/site/posts');
     const paths = files.map((fileName) => ({
       params: {
         slug: fileName.replace('.md', ''),
